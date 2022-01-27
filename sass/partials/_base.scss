@@ -2,9 +2,25 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 body {
 	min-height: 200vh;
+}
+
+.h2-line {
+	content: '';
+	width: 100px;
+	background: $secondary-color;
+	height: 6px;
+	margin: 0 auto;
+}
+
+.h2-line-white {
+	content: '';
+	width: 100px;
+	background: $white;
+	height: 6px;
+	margin: 0 auto;
 }

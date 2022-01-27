@@ -1,0 +1,91 @@
+.work-section {
+	padding-bottom: 150px;
+
+	h2 {
+		text-align: center;
+		color: $primary-color;
+		padding: 150px 0 10px 0;
+		font-weight: 550;
+	}
+
+	.work-content {
+		margin: 0 auto;
+		padding-top: 70px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 85%;
+		max-width: 1200px;
+
+		.card {
+			max-width: 300px;
+			height: 360px;
+
+			img {
+				max-width: 300px;
+			}
+
+			.card-text {
+				padding: 10px;
+
+				h3 {
+					font-size: 25px;
+					padding-bottom: 7px;
+				}
+
+				p {
+					padding-bottom: 20px;
+				}
+
+				a {
+					button {
+						padding: 10px 20px;
+						border: none;
+						color: $white;
+						transition: all 0.1s ease;
+					}
+
+					button:hover {
+						transition: all 0.1s ease;
+						box-shadow: 0px 2px 7px #000;
+					}
+				}
+			}
+		}
+
+		.rainy {
+			box-shadow: 0px 0px 0px 10px $rainy;
+			color: $rainy;
+
+			a {
+				button {
+					background-color: $rainy;
+					margin-top: 6px;
+				}
+			}
+		}
+
+		.bfilter {
+			box-shadow: 0px 0px 0px 10px $primary-color;
+			color: $primary-color;
+
+			a {
+				button {
+					background-color: $primary-color;
+				}
+			}
+		}
+
+		.foodblog {
+			box-shadow: 0px 0px 0px 10px $foodblog;
+			color: $foodblog;
+
+			a {
+				button {
+					background-color: $foodblog;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+.skill-section {
+	padding: 100px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $dark-bg;
+
+	h2 {
+		color: $white;
+		padding-bottom: 10px;
+	}
+
+	.skill_bars {
+		padding-top: 50px;
+		max-width: 700px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.bar {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
+			padding: 10px 0;
+
+			.skill_btn {
+				color: $white;
+				background-color: $primary-color;
+				width: 100px;
+				height: 35px;
+				border: none;
+				z-index: 1000;
+			}
+
+			.fill {
+				content: '';
+				width: 82%;
+				height: 35px;
+				z-index: 1;
+				background: $grey;
+			}
+
+			.seventy::before {
+				content: '';
+				display: block;
+				width: 80%;
+				height: 35px;
+				background: $fill-color;
+			}
+
+			.eighty::before {
+				content: '';
+				display: block;
+				width: 90%;
+				height: 35px;
+				background: $fill-color;
+			}
+
+			.sixty-five::before {
+				content: '';
+				display: block;
+				width: 75%;
+				height: 35px;
+				background: $fill-color;
+			}
+
+			.prosent {
+				color: #000;
+				background-color: $grey;
+				height: 35px;
+				border: none;
+				padding-right: 10px;
+				font-style: italic;
+			}
+		}
+	}
+}
