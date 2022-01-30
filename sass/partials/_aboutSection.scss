@@ -88,4 +88,29 @@
 			}
 		}
 	}
+
+	@media (max-width: 860px) {
+		.about-content {
+			.comp {
+				flex-direction: column-reverse;
+				text-align: center;
+				.comp-content {
+					width: 100%;
+				}
+			}
+
+			.studies {
+				flex-direction: column;
+				text-align: center;
+
+				.studies-content {
+					width: 100%;
+				}
+
+				.book-icon {
+					padding-top: 20px;
+				}
+			}
+		}
+	}
 }

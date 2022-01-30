@@ -88,4 +88,14 @@
 			}
 		}
 	}
+
+	@media (max-width: 1200px) {
+		.work-content {
+			flex-direction: column;
+
+			.card {
+				margin: 20px 0px;
+			}
+		}
+	}
 }

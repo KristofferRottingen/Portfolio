@@ -43,11 +43,31 @@ header {
           align-items: center;
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  padding: 15px 100px 25px 100px;
+  padding: 30px 100px 30px 100px;
   z-index: 100;
 }
 
-header ul {
+header .nav {
+  width: 100%;
+}
+
+header .nav .hamburger-label {
+  float: right;
+  color: #386fb7;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+header .nav .nav-container .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav .nav-container ul {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,28 +80,79 @@ header ul {
           align-items: center;
 }
 
-header ul li {
+header .nav .nav-container ul li {
   position: relative;
   list-style: none;
 }
 
-header ul li a {
+header .nav .nav-container ul li a {
   position: relative;
   margin: 0 15px;
   text-decoration: none;
   color: #386fb7;
   letter-spacing: 2px;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+header .nav .nav-container ul li a:hover {
+  -webkit-text-decoration: underline 3px;
+          text-decoration: underline 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .nav .nav-container ul li .active {
+  -webkit-text-decoration: underline 3px;
+          text-decoration: underline 3px;
 }
 
 .sticky {
   background-color: #386fb7;
-  padding: 5px 100px 20px 100px;
+  padding: 25px 100px 25px 100px;
 }
 
 .sticky a {
-  color: #ffffff;
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+.stick {
+  color: #ffffff !important;
+}
+
+@media (max-width: 780px) {
+  .nav-container {
+    display: none;
+  }
+  .nav-container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-container ul li {
+    padding-bottom: 10px;
+  }
+  header {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hamburger-label {
+    display: block !important;
+  }
 }
 
 .banner {
@@ -136,7 +207,6 @@ header ul li a {
 
 .banner .hero .info {
   width: 50%;
-  height: 100%;
 }
 
 .banner .hero .info h1 {
@@ -168,7 +238,7 @@ header ul li a {
   font-weight: 550;
 }
 
-.banner .hero .info button {
+.banner .hero .info a {
   background-color: #40b76b;
   padding: 10px 15px;
   color: #ffffff;
@@ -181,13 +251,60 @@ header ul li a {
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
   border-radius: 3px;
+  cursor: pointer;
+  width: 161px;
 }
 
-.banner .hero .info button:hover {
+.banner .hero .info a:hover {
   -webkit-box-shadow: 0px 2px 7px #000;
           box-shadow: 0px 2px 7px #000;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+}
+
+@media (max-width: 1200px) {
+  .banner .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .banner .hero .potrait {
+    width: 100%;
+  }
+  .banner .hero .potrait img {
+    max-width: 250px;
+    margin-bottom: 30px;
+  }
+  .banner .hero .info {
+    width: 100%;
+  }
+  .banner .hero .info a {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner .hero {
+    width: 100%;
+    padding: 50px;
+  }
+  .banner .hero .info h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner .hero .potrait img {
+    max-width: 200px;
+  }
+  .banner .hero .info h1 {
+    font-size: 20px;
+  }
+  .banner .hero .info img {
+    max-width: 200px;
+  }
 }
 
 .about-section {
@@ -315,6 +432,32 @@ header ul li a {
   max-width: 250px;
 }
 
+@media (max-width: 860px) {
+  .about-section .about-content .comp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-section .about-content .comp .comp-content {
+    width: 100%;
+  }
+  .about-section .about-content .studies {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .about-section .about-content .studies .studies-content {
+    width: 100%;
+  }
+  .about-section .about-content .studies .book-icon {
+    padding-top: 20px;
+  }
+}
+
 .work-section {
   padding-bottom: 150px;
 }
@@ -412,6 +555,18 @@ header ul li a {
 
 .work-section .work-content .foodblog a button {
   background-color: #f1ae4c;
+}
+
+@media (max-width: 1200px) {
+  .work-section .work-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .work-section .work-content .card {
+    margin: 20px 0px;
+  }
 }
 
 .skill-section {
@@ -533,7 +688,6 @@ header ul li a {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 50px;
-  height: 50vh;
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #3e3e3e), color-stop(50.5%, transparent));
   background: linear-gradient(to bottom right, #3e3e3e 50%, transparent 50.5%);
 }
@@ -543,18 +697,105 @@ header ul li a {
   padding-bottom: 10px;
 }
 
-.contact-section .contact-form {
+.contact-section .contact-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
-  padding-top: 50px;
+  padding: 50px;
+  margin-top: 50px;
+  background-color: #386fb7;
+  color: #ffffff;
+  margin-bottom: 100px;
+}
+
+.contact-section .contact-info .face {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+}
+
+.contact-section .contact-info .face a {
+  color: #ffffff;
+  font-size: 35px;
+}
+
+.contact-section .contact-info .face p {
+  margin-bottom: 7px;
+}
+
+.contact-section .contact-info .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+}
+
+.contact-section .contact-info .email i {
+  font-size: 35px;
+}
+
+.contact-section .contact-info .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+}
+
+.contact-section .contact-info .phone i {
+  font-size: 35px;
+}
+
+@media (max-width: 600px) {
+  .contact-section .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 320px;
+    padding: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

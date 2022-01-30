@@ -19,11 +19,11 @@
             <button class="hamburger-label"><i class="fas fa-bars"></i></button>
             <div class="nav-container">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="#">ABOUT ME</a></li>
-                    <li><a href="#">SKILLSET</a></li>
-                    <li><a href="#">MY WORK</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a class="home_btn">HOME</a></li>
+                    <li><a class="about_btn">ABOUT ME</a></li>
+                    <li><a class="work_btn">MY WORK</a></li>
+                    <li><a class="skill_btn">SKILLSET</a></li>
+                    <li><a class="contact_btn ">CONTACT</a></li>
                 </ul>
             </div>
         </div>
@@ -49,7 +49,7 @@
                     <br>
                     <p class="signature">Yours sincerely,</p>
                     <img src="images/signature.png" alt="signature">
-                    <button>MORE ABOUT ME</button>
+                    <a class="btn">MORE ABOUT ME</a>
                 </div>
                 
             </div>
@@ -175,13 +175,24 @@
         <div class="contact-section">
             <h2>CONTACT</h2>
             <div class="h2-line-white"></div>
-            <div class="contact-form">
-                
+            <div class="contact-info">
+                <div class="face">
+                    <a href="https://nb-no.facebook.com/people/Kristoffer-R%C3%B8ttingen/100007932007801/"><i class="fab fa-facebook-square"></i></a>
+                    <p>@Kristofferrøttingen</p>
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope"></i>
+                    <p>kriroe06@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <p>+47 468 65 077</p>
+                </div>
             </div>
         </div>
 
     </main>
 </body>
 <script src="js/nav.js" type="module"></script>
-<script src="js/contact.js" type=""module></script>
+<script src="js/components/hamburgerMenu.js" type="module"></script>
 </html>
