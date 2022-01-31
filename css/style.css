@@ -241,6 +241,7 @@ header .nav .nav-container ul li .active {
 
 .banner .hero .info a {
   background-color: #40b76b;
+  text-decoration: none;
   padding: 10px 15px;
   color: #ffffff;
   border: none;
