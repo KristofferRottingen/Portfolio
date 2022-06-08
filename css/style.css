@@ -501,6 +501,7 @@ header .nav .nav-container ul li .active {
 
 .work-section .work-content .card img {
   max-width: 300px;
+  max-height: 200px;
 }
 
 .work-section .work-content .card .card-text {
@@ -552,14 +553,14 @@ header .nav .nav-container ul li .active {
   background-color: #386fb7;
 }
 
-.work-section .work-content .foodblog {
-  -webkit-box-shadow: 0px 0px 0px 10px #f1ae4c;
-          box-shadow: 0px 0px 0px 10px #f1ae4c;
-  color: #f1ae4c;
+.work-section .work-content .evon {
+  -webkit-box-shadow: 0px 0px 0px 10px #3B363C;
+          box-shadow: 0px 0px 0px 10px #3B363C;
+  color: #3B363C;
 }
 
-.work-section .work-content .foodblog a button {
-  background-color: #f1ae4c;
+.work-section .work-content .evon a button {
+  background-color: #3B363C;
 }
 
 @media (max-width: 1200px) {

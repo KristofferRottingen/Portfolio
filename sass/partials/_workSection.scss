@@ -24,6 +24,7 @@
 
 			img {
 				max-width: 300px;
+				max-height: 200px;
 			}
 
 			.card-text {
@@ -77,13 +78,13 @@
 			}
 		}
 
-		.foodblog {
-			box-shadow: 0px 0px 0px 10px $foodblog;
-			color: $foodblog;
+		.evon {
+			box-shadow: 0px 0px 0px 10px $evon;
+			color: $evon;
 
 			a {
 				button {
-					background-color: $foodblog;
+					background-color: $evon;
 				}
 			}
 		}
